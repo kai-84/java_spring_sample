@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.nothingbehind.spring.sample.entities.Employee;
-import com.nothingbehind.spring.sample.services.EmployeeService;
+import com.nothingbehind.spring.sample.service_impl.EmployeeServiceImpl;
 
 @RestController
 public class IndexController {
 	
 	@Autowired
-	EmployeeService employeeService;
+	EmployeeServiceImpl employeeService;
 	
 	
 	@GetMapping("/")
