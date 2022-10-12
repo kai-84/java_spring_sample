@@ -16,4 +16,10 @@ public class EmployeeService {
 	public List<Employee> getEmployees() {
 		return employeeRepository.findAll();
 	}
+	
+	public void createEmployee(String name) {
+		Employee employee = new Employee();
+		employee.setName(name);
+		employeeRepository.save(employee);
+	}
 }
