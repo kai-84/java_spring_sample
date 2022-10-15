@@ -2,14 +2,18 @@ package com.nothingbehind.spring.sample.resources;
 
 import java.io.Serializable;
 
-import javax.annotation.Resource;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import org.springframework.stereotype.Service;
 
 @Service
 public class CreateEmployeeRequestResource implements Serializable {
 	private static final long serialVersionUID = 1L;
-	private String name = "No name";
+	
+	@NotNull
+	@Size(min = 1, max = 128)
+	private String name;
 
 	public String getName() {
 		return name;
@@ -18,5 +22,4 @@ public class CreateEmployeeRequestResource implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-
 }

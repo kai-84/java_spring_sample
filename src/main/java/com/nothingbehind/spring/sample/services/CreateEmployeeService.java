@@ -17,7 +17,6 @@ public class CreateEmployeeService {
 	public void create(CreateEmployeeRequestResource resource) {
 		Employee employee = new Employee();
 		employee.setName(resource.getName());
-		System.out.println(resource.getName());
 		employeeRepository.save(employee);
 	}
 }
