@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.nothingbehind.spring.sample.entities.Employee;
 
-public class EmployeeResource implements Serializable {
+public class EmployeeListResource implements Serializable {
 	private static final long serialVersionID = 1L;
 	private List<Employee> employees;
 	private String mainEmployeeName = "";

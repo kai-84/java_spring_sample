@@ -1,4 +1,4 @@
-package com.nothingbehind.spring.sample.service_impl;
+package com.nothingbehind.spring.sample.services;
 
 import java.util.List;
 
@@ -7,27 +7,19 @@ import org.springframework.stereotype.Service;
 
 import com.nothingbehind.spring.sample.entities.Employee;
 import com.nothingbehind.spring.sample.repositories.EmployeeRepository;
-import com.nothingbehind.spring.sample.resouces.EmployeeResource;
-import com.nothingbehind.spring.sample.services.EmployeeService;
+import com.nothingbehind.spring.sample.resouces.EmployeeListResource;
 
 @Service
-public class EmployeeServiceImpl implements EmployeeService {
+public class EmployeeListService {
 	@Autowired
 	EmployeeRepository employeeRepository;
 
-	public EmployeeResource getEmployees() {
+	public EmployeeListResource getEmployees() {
 		List<Employee> employees = employeeRepository.findAll();
-		EmployeeResource resource = new EmployeeResource();
+		EmployeeListResource resource = new EmployeeListResource();
 		resource.setEmployees(employees);
 		resource.setMainEmployeeName(employees.get(0).getName());
 
 		return resource;
-	}
-
-	public void createEmployee(String name) {
-		Employee employee = new Employee();
-		employee.setName(name);
-		employeeRepository.save(employee);
-
 	}
 }
