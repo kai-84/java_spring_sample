@@ -7,10 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.nothingbehind.spring.sample.entities.Employee;
 import com.nothingbehind.spring.sample.repositories.EmployeeRepository;
-import com.nothingbehind.spring.sample.resouces.EmployeeListResource;
+import com.nothingbehind.spring.sample.resources.EmployeeListResource;
 
 @Service
 public class EmployeeListService {
+
 	@Autowired
 	EmployeeRepository employeeRepository;
 

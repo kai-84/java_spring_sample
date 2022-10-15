@@ -1,7 +1,9 @@
-package com.nothingbehind.spring.sample.resouces;
+package com.nothingbehind.spring.sample.resources;
 
 import java.io.Serializable;
 import java.util.List;
+
+import javax.annotation.Resource;
 
 import com.nothingbehind.spring.sample.entities.Employee;
 
