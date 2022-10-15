@@ -14,25 +14,23 @@ import com.nothingbehind.spring.sample.service_impl.EmployeeServiceImpl;
 
 @RestController
 public class IndexController {
-	
+
 	@Autowired
 	EmployeeServiceImpl employeeService;
-	
-	
+
 	@GetMapping("/")
-    public String index() {
-        return "hello, world!";
-    }
-	
+	public String index() {
+		return "hello, world!";
+	}
+
 	@GetMapping("/employees")
 	public List<Employee> employees() {
 		return employeeService.getEmployees();
 	}
-	
+
 	@RequestMapping(path = "/employees", method = RequestMethod.POST)
-	public void createEmployee (@RequestParam(value = "name", defaultValue = "John") String name) {
+	public void createEmployee(@RequestParam(value = "name", defaultValue = "John") String name) {
 		employeeService.createEmployee(name);
 	}
-	
-	
+
 }

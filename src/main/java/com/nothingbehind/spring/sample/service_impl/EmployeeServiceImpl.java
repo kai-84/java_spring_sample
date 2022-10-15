@@ -13,11 +13,11 @@ import com.nothingbehind.spring.sample.services.EmployeeService;
 public class EmployeeServiceImpl implements EmployeeService {
 	@Autowired
 	EmployeeRepository employeeRepository;
-	
+
 	public List<Employee> getEmployees() {
 		return employeeRepository.findAll();
 	}
-	
+
 	public void createEmployee(String name) {
 		Employee employee = new Employee();
 		employee.setName(name);

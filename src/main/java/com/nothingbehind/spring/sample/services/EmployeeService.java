@@ -6,6 +6,6 @@ import com.nothingbehind.spring.sample.entities.Employee;
 
 public interface EmployeeService {
 	public List<Employee> getEmployees();
-	
+
 	public void createEmployee(String name);
 }

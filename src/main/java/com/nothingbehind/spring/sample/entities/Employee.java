@@ -10,17 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="employees")
+@Table(name = "employees")
 public class Employee implements Serializable {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id")
 	private Integer employeeId;
-	
+
 	@Column(name = "name")
 	private String name;
-	
+
 	public Integer getEmployeeId() {
 		return employeeId;
 	}
