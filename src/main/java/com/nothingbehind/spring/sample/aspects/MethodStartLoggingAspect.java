@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class MethodStartLoggingAspect {
-	@Before("execution(* *..*ServiceImpl.*(..))")
+	@Before("execution(* *..*Service.*(..))")
 	public void startLog(JoinPoint jp) {
 		System.out.println("Method Start: " + jp.getSignature());
 	}

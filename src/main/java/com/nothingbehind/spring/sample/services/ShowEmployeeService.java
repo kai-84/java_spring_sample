@@ -18,7 +18,7 @@ public class ShowEmployeeService {
 
 	public ShowEmployeeResponseResource show(Integer employeeId) {
 		Optional<Employee> employee = employeeRepository.findById(employeeId);
-		
+
 		if (!employee.isPresent()) {
 			throw new EmployeeNotFoundException(employeeId);
 		}
