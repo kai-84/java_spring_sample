@@ -1,6 +1,7 @@
 package com.nothingbehind.spring.sample.repositories;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +14,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
 	@Override
 	List<Employee> findAll();
-
-	Employee findByEmployeeId(Integer id);
+	
+	@Override
+	Employee getById(Integer id);
 }
